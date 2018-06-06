@@ -81,7 +81,7 @@
         <div class="title m-b-md">
             Welcome {{$title}}
         </div>
-
+<h1>test</h1>
         <div class="links">
             <a href="https://laravel.com/docs">Documentation</a>
             <a href="https://laracasts.com">Laracasts</a>
