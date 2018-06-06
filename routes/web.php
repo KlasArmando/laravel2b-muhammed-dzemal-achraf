@@ -13,6 +13,10 @@
 
 Route::get('/', function () {
     $title = "Sportzone";
-    return view('welcome', compact('title'));
+    return view('pages.home', compact('title'));
 });
+
+Route::resource('comments','CommentController');
+
+
 
