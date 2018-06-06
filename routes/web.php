@@ -11,6 +11,7 @@
 |
 */
 
+//homepagina
 Route::get('/', function () {
     $title = "Sportzone";
     return view('welcome', compact('title'));
