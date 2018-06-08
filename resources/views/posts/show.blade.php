@@ -11,7 +11,7 @@
                 <hr>
                 <small>Written on {{$post->created_at}}</small>
                 <hr>
-                <a href="{{ URL::to('/posts') }}" class="btn">Go Back</a>
+                <a href="{{ URL::to('/') }}" class="btn">Go Back</a>
                 <a href="{{route('posts.show', $post->id)}}/edit" class="btn">Edit</a>
 
                 {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', ]) !!}

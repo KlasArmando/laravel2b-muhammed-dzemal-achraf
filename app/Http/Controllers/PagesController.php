@@ -3,19 +3,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 class PagesController extends Controller
 {
-    public function index(){
-        $title = 'Welcome To Laravel!';
-        //return view('pages.index', compact('title'));
-        return view('pages.index')->with('title', $title);
+    public function voetbal(){
+        $title = 'Voetbal';
+        return view('pages.voetbal')->with('title', $title);
     }
-    public function about(){
-        $title = 'About Us';
-        return view('pages.about')->with('title', $title);
-    }
-    public function services(){
+    public function basketball(){
         $data = array(
-            'title' => 'Services',
+            'title' => 'Basketball',
         );
-        return view('pages.services')->with($data);
+        return view('pages.basketball')->with($data);
     }
 }
