@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{config('app.name', 'Sportzone')}}</title>
-    <link rel="stylesheet" href="{{ URL::asset('css/style.scss') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
