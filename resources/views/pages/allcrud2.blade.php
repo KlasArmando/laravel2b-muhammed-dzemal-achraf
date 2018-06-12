@@ -5,4 +5,4 @@
         <a href="{{url("crud/" . $crud->id)}}"><button>View Comment</button></a>
 
     <hr />
-@endforeach
+@endforeach()
