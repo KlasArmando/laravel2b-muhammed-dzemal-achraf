@@ -12,8 +12,6 @@
 */
 
 Route::get('/', 'PostsController@index');
-Route::get('/voetbal', 'PagesController@voetbal');
-Route::get('/basketball', 'PagesController@basketball');
 
 Route::resource('posts', 'PostsController');
 

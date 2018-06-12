@@ -30,12 +30,12 @@
             @foreach($posts as $post)
                 <tr>
                     <td>{{$post->title}}</td>
-                    <td><a href="/posts/{{$post->id}}/edit" class="btn">Edit</a></td>
+                    <td><a href="{{route('posts.show', $post->id)}}/edit" class="btn">Edit</a></td>
                     <td>
-                        {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+                        {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', ]) !!}
                         {{Form::hidden('_method', 'DELETE')}}
                         {{Form::submit('Delete', ['class' => 'btn'])}}
-                        {!!Form::close()!!}
+                        {!! Form::close() !!}
                     </td>
                 </tr>
             @endforeach

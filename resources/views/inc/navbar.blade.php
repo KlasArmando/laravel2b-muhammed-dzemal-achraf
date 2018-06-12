@@ -58,9 +58,6 @@
         <nav>
             <ul>
                 <li><a href="{{ URL::to('/') }}">Home</a></li>
-                <li><a href="{{ URL::to('/voetbal') }}">Voetbal</a></li>
-                <li><a href="{{ URL::to('/basketball') }}">Basketball</a></li>
-
             </ul>
 
         </nav>
