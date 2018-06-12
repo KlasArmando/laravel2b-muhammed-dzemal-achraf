@@ -18,5 +18,8 @@ Route::get('/', function () {
 
 Route::resource('comments','CommentController');
 
+Route::resource('crud','Crud2Controller');
+
+
 
 
