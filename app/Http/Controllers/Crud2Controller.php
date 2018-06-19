@@ -20,7 +20,7 @@ class Crud2Controller extends Controller
     {
         //
         $cruds = Crud::all();
-        return view('pages.allcrud2')->withCruds($cruds);
+        return view('chatroom.chat.allcrud2')->withCruds($cruds);
     }
 
     /**
@@ -30,7 +30,7 @@ class Crud2Controller extends Controller
      */
     public function create()
     {
-        return view('partials.create');
+        return view('chatroom.chat.create');
     }
 
     /**
@@ -50,6 +50,8 @@ class Crud2Controller extends Controller
         $crud = new Crud;
 
         $crud->body = $request->body;
+        $crud->name = $request->name;
+        $crud->email = $request->email;
 
         $crud->save();
 
@@ -68,7 +70,7 @@ class Crud2Controller extends Controller
     {
         //page to show review
         $crud = Crud::find($id);
-        return view('partials.show2')->withCrud($crud);
+        return view('chatroom.chat.show2')->withCrud($crud);
     }
 
     /**
@@ -82,7 +84,7 @@ class Crud2Controller extends Controller
         // find the post in the Database and save as var
         $crud = Crud::find($id);
         // return the view and pass in the var we previously created
-        return view('partials.edit')->withCrud($crud);
+        return view('chatroom.chat.edit')->withCrud($crud);
     }
 
     /**
