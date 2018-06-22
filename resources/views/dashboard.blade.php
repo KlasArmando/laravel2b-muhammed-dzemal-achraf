@@ -4,7 +4,8 @@
 
     <!--  stat page title  -->
     <section class="page_title">
-        <h1 class="title">Dashboard</h1>
+        <h1 class="title">USER Dashboard</h1>
+
     </section>
     <!--  end page title  -->
 
@@ -17,7 +18,12 @@
                     {{ session('status') }}
                 </div>
             @endif
-                <a href="{{route('posts.create')}}" class="btn">Create Post</a>
+                <div class="container">
+                    <div>
+                        @component('components.who')
+                        @endcomponent
+                    </div>
+                </div>
         </div>
     </section>
 @endsection

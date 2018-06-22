@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md">
+<div class="navbar navbar-expand-md">
     <div class="container">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,11 +29,11 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                            <a class="dropdown-item" href="{{ URL::to('/dashboard') }}">Dashboard</a>
+                                <a class="dropdown-item" href="{{ URL::to('/dashboard') }}">Dashboard</a>
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                         document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -48,7 +48,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</div>
 <header>
     <div class="wrapper">
 
@@ -58,9 +58,9 @@
         <nav>
             <ul>
                 <li><a href="{{ URL::to('/') }}">Home</a></li>
-                <li><a href="{{ URL::to('/about') }}">About</a></li>
-                <li><a href="{{ URL::to('/services') }}">Services</a></li>
-                <li><a href="{{ URL::to('/posts') }}">Blog</a></li>
+                <li><a href="{{ URL::to('/nieuws') }}">Alle nieuws</a></li>
+                <li><a href="{{ URL::to('/stats') }}">Statistieken</a></li>
+                <li><a href="{{ URL::to('chatroom') }}">Chatroom</a></li>
 
             </ul>
 
