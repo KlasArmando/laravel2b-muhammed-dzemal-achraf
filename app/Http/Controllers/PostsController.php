@@ -16,7 +16,7 @@ class PostsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('auth:admin', ['except' => ['index', 'show', 'create', 'nieuws']]);
     }
 
     /**
@@ -26,13 +26,14 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //$posts = Post::all();
-        //return Post::where('title', 'Post Two')->get();
-        //$posts = DB::select('SELECT * FROM posts');
-        //$posts = Post::orderBy('title','desc')->take(1)->get();
-        //$posts = Post::orderBy('title','desc')->get();
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
+        $posts = Post::orderBy('created_at','desc')->take(4)->get();
         return view('posts.index')->with('posts', $posts);
+    }
+
+    public function nieuws()
+    {
+        $posts = Post::orderBy('created_at','desc')->paginate(5);
+        return view('posts.nieuws')->with('posts', $posts);
     }
 
     /**
