@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Crud::class, function (Faker $faker) {
+$factory->define(App\Crud4::class, function (Faker $faker) {
     return [
         //
     ];
